@@ -27,9 +27,9 @@ namespace ConsoleApp
                         var hail = HailCalculator.CalculateHailNumber(numericValue);
                         stop.Stop();
                         Console.WriteLine($"The value {numericValue} has a hail number of {hail.Value}.");
-                        Console.WriteLine($"The hail number was calculated in {stop.ElapsedMilliseconds} milliseconds with {hail.Hops.Count} hops.");
-                        Console.WriteLine($"Hops: {string.Join(", ", hail.Hops)}");
-                        Console.WriteLine($"Max hop value: {hail.Hops.Max()}");
+                        Console.WriteLine($"The hail number was calculated in {stop.ElapsedTicks:N0} ticks with {hail.Hops.Count} hops.");
+                        //Console.WriteLine($"Hops: {string.Join(", ", hail.Hops)}");
+                        Console.WriteLine($"Max hop value: {hail.Hops.Max():N0}");
                     }
                     else
                         Console.WriteLine("Supplied value is less than 1. Please enter a value greater than 1.");
